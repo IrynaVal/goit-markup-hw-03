@@ -18,6 +18,8 @@
 }
 
 body {
+    margin: 0;
+
     background-color: var(--main-background-color);
     color: var(--main-text-color);
     font-family: var(--main-font-family);
@@ -25,7 +27,61 @@ body {
     letter-spacing: 0.03em;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Шапка */
+
+.header {
+    border: 1px solid var(--header-line-color);
+}
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+
+    /* outline: 1px solid red; */
+}
+
+.header-container,
+.header-nav,
+.nav-list,
+.contacts-list {
+    display: flex;
+    align-items: center;
+}
+
+.contacts-list {
+    margin-left: auto;
+}
+
+.nav-list,
+.contacts-list {
+    gap: 50px;
+}
+
 .logo {
+    display: block;
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+
     color: var(--logo-color);
     font-family: var(--logo-font-family);
     font-weight: 700;
@@ -41,6 +97,14 @@ body {
 
 .list {
     list-style: none;
+    padding-left: 0;
+}
+
+.link,
+.contacts-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .link {
@@ -77,30 +141,41 @@ body {
     color: var(--accent-color)
 }
 
+/* Секція Герой */
+
 .hero {
     background-color: var(--accent-background-color);
+    text-align: center;
 }
 
 .hero-title {
+    margin-bottom: 30px;
+
     color: #FFFFFF;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.4;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
 
 .btn {
+
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-width: 216px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
     background-color: var(--accent-color);
     color: #FFFFFF;
     font-family: var(--main-font-family);
     font-weight: 700;
     font-size: 16px;
     line-height: 1.9;
-    display: flex;
     align-items: center;
-    text-align: center;
     letter-spacing: 0.06em;
     cursor: pointer;
 }
@@ -113,6 +188,13 @@ body {
 .btn:focus {
     background-color: #188CE8;
 }
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+/* Особливості */
 
 .visually-hidden {
     position: absolute;
@@ -127,7 +209,18 @@ body {
     margin: -1px;
 }
 
+.features-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature-item {
+    width: 270px;
+}
+
 .features-name {
+    margin-bottom: 10px;
+
     color: var(--secondary-text-color);
     line-height: 1.1;
     text-transform: uppercase;
@@ -138,12 +231,32 @@ body {
     line-height: 1.7;
 }
 
+/* Чим ми займаємося */
+
+.work-section {
+    padding-bottom: 94px;
+}
+
+.work-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 .work-title,
 .team-title {
+    margin-bottom: 50px;
+
     font-size: 36px;
     line-height: 1.2;
     text-align: center;
     color: var(--secondary-text-color);
+}
+
+/* Наша команда */
+
+.team-container {
+    display: flex;
+    justify-content: space-between;
 }
 
 .team {
@@ -154,7 +267,13 @@ body {
     background-color: var(--main-background-color);
 }
 
+.team-photo {
+    margin-bottom: 30px;
+}
+
 .team-member {
+    margin-bottom: 10px;
+
     color: var(--secondary-text-color);
     font-weight: 500;
     font-size: 16px;
@@ -163,13 +282,28 @@ body {
 }
 
 .team-text {
+    padding-bottom: 30px;
+
     font-size: 16px;
     line-height: 1.2;
     text-align: center;
 }
 
+/* Футер */
+
 .footer {
     background-color: var(--accent-background-color);
+}
+
+.footer-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.logo.logo-footer {
+    display: inline-block;
+    margin: 0 0 20px 0;
+    padding: 0
 }
 
 .logo-white {
@@ -182,6 +316,9 @@ body {
 
 .address-item,
 .city-address {
+    display: inline-block;
+    margin-bottom: 9px;
+
     font-family: var(--main-font-family);
     font-weight: 400;
     font-size: 14px;
@@ -203,6 +340,8 @@ body {
     color: #FFFFFF;
 }
 
+/* Наші проєкти */
+
 .btn-filter {
     background-color: var(--secondary-background-color);
     color: var(--secondary-text-color);
@@ -213,6 +352,23 @@ body {
     text-align: center;
     letter-spacing: 0.03em;
     cursor: pointer;
+}
+
+.filter-list {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-filter {
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    min-width: 73px;
+    border: 1px solid transparent;
+    border-radius: 4px;
 }
 
 .btn-filter.current {
@@ -227,7 +383,13 @@ body {
     color: #FFFFFF;
 }
 
+.projects-photo {
+    margin-bottom: 20px;
+}
+
 .projects-title {
+    margin-bottom: 4px;
+
     color: var(--secondary-text-color);
     font-size: 18px;
     line-height: 2;
@@ -238,4 +400,21 @@ body {
     font-size: 16px;
     line-height: 1.9;
     letter-spacing: 0.03em;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.projects-item {
+    flex-basis: calc((100% - 30px * 2) / 3);
+    border: 1px solid var(--container-background-color);
+}
+
+.projects-data {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 20px;
 }
